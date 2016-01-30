@@ -10,7 +10,7 @@ module.exports = function (app, db) {
          res.sendFile(process.cwd() + '/public/index.html');
       });
    
-   app.route("/api/imagesearch/:url(*)")
+   app.route("/api/imagesearch/:url")
       .get(imagesProcessing.apiResponse);
       
    app.route("/api/latest/imagesearch/")
